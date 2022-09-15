@@ -1,32 +1,40 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class LoginTests extends TestBase{
 
+public class LoginTests extends TestBase {
+
+
+    @BeforeMethod
+    public void precondition() {
+        if (app.getHelperUser().isLogged()) {
+            app.getHelperUser().logout();
+        }
+    }
 
     @Test
     public void loginSuccess() {
 
-
         //open login form
-        WebElement loginTab = wd.findElement(By.xpath("//a[@href='/login']"));
-        loginTab.click();
-
+        app.getHelperUser().openLoginRegistrationForm();
         //fill email
-
-        WebElement inputEmail = wd.findElement(By.xpath("//input[@placeholder='Email']"));
-        inputEmail.click();
-        inputEmail.clear();
-        inputEmail.sendKeys("423090@gmail.com");
-        WebElement inputPassword = wd.findElement(By.xpath("//input[@placeholder='Password']"));
-        inputPassword.click();
-        inputPassword.clear();
-        inputPassword.sendKeys("Yy12345$");
+        app.getHelperUser().fillLoginRegistrationForm("423090@gmail.com", "Yy12345$");
         // submit login
-        WebElement loginButton = wd.findElement(By.xpath("//*[text()=' Login']"));
-        loginButton.click();
+        app.getHelperUser().submitLogin();
+
     }
 
 
+    //@Test
+    //public void loginNegativeWrongEmailFormat() {
+
+    //}
+
+    //@Test
+    //public void loginNegativeWrongPasswordFormat() {
+
+
+    //}
 }
