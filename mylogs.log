@@ -1,0 +1,6 @@
+9095 [Test worker] INFO  TestBase - test started------------Login success
+9420 [Test worker] INFO  TestBase - User login with data:  email 423090@gmail.com & password Yy12345$
+10158 [Test worker] INFO  TestBase - Assert passed
+20:53:23.317 INFO  TestBase - test started------------Login success
+20:53:23.630 INFO  TestBase - User login with data:  email 423090@gmail.com & password Yy12345$
+20:53:25.639 INFO  TestBase - Assert passed

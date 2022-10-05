@@ -33,9 +33,10 @@ public class HelperUser extends HelperBase{
         loginTab.click();
     }
 
-    public void fillLoginRegistrationForm(String email, String password){
-       type(By.xpath("//input[@placeholder='Email']"),email);
-       type(By.xpath("//input[@placeholder='Password']"),password);
+   public void fillLoginRegistrationForm(String email, String password) {
+       type(By.xpath("//input[@placeholder='Email']"), email);
+       type(By.xpath("//input[@placeholder='Password']"), password);
+   }
 
 
 
@@ -50,7 +51,7 @@ public class HelperUser extends HelperBase{
         inputPassword.sendKeys(password);
 
          */
-    }
+
 
     public void fillLoginRegistrationForm(User user) {
         type(By.xpath("//input[@placeholder='Email']"), user.getEmail());
@@ -63,9 +64,13 @@ public class HelperUser extends HelperBase{
     }
 
     public boolean isAlertPresent() {
-        Alert alert = wd.switchTo().alert();
-        return alert != null;
-    }
+            Alert alert = wd.switchTo().alert();
+            if (alert==null){
+                return false;
+            }else {
+                return true;
+            }
+        }
 
     public boolean isErrorWrongFormat() {
         Alert alert = wd.switchTo().alert();
@@ -87,10 +92,34 @@ public class HelperUser extends HelperBase{
 
     }
 
-    public String getTitleMessage() {
+//    public String getTitleMessage() {
+//
+//        return wd.findElement(By.xpath("//h1[text()=' No Contacts here!']")).getText();
+//    }
 
-        return wd.findElement(By.xpath("//h1[text()=' No Contacts here!']")).getText();
+
+    public boolean isNoContactsHereDisplayed() {
+        // return wd.findElement(By.cssSelector("div.contact-page_message__2qafk>h1")).getText().contains("No Contacts here!");
+        return new WebDriverWait(wd, Duration.ofSeconds(8))
+                .until(ExpectedConditions
+                        .textToBePresentInElement(wd.findElement(By.cssSelector("div.contact-page_message__2qafk>h1")),"No Contacts here!"));
     }
+    public boolean isAlertWithErrorPresent(String message) {
+        Alert alert = new WebDriverWait(wd, Duration.ofSeconds(5))
+                .until(ExpectedConditions.alertIsPresent());
+        if(alert != null && alert.getText().contains(message)){
+            alert.accept();
+            return true;
+        }
+        return false;
+    }
+
+    public void login(User user) {
+        openLoginRegistrationForm();
+        fillLoginRegistrationForm(user);
+        submitLogin();
+    }
+
 
 
 }

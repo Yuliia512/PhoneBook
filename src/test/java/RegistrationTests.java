@@ -16,10 +16,11 @@ public class RegistrationTests extends TestBase{
 
     public void RegistrationSuccess(){
         app.getHelperUser().openLoginRegistrationForm();
-        app.getHelperUser().fillLoginRegistrationForm("city1@gmail.com","Yy12345$");
+        app.getHelperUser().fillLoginRegistrationForm("city7@gmail.com","Yy12345$");
         app.getHelperUser().submitRegistration();
-        Assert.assertEquals(app.getHelperUser().getTitleMessage(), "No Contacts here!");
-        //Assert.assertTrue(app.getHelperUser().isLogged());
+        //Assert.assertEquals(app.getHelperUser().getTitleMessage(), "No Contacts here!");
+        Assert.assertTrue(app.getHelperUser().isLogged());
+        Assert.assertTrue(app.getHelperUser().isNoContactsHereDisplayed());
     }
 
     @Test
@@ -33,8 +34,8 @@ public class RegistrationTests extends TestBase{
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm(user);
         app.getHelperUser().submitRegistration();
-        //Assert.assertEquals(app.getHelperUser().getTitleMessage(), "No Contacts here!");
         Assert.assertTrue(app.getHelperUser().isLogged());
+        Assert.assertTrue(app.getHelperUser().isNoContactsHereDisplayed());
     }
 
     @Test
@@ -42,6 +43,32 @@ public class RegistrationTests extends TestBase{
        app.getHelperUser().openLoginRegistrationForm();
        app.getHelperUser().fillLoginRegistrationForm(new User().setEmail("city1gmail.com").setPassword("Yy12345$"));
         app.getHelperUser().submitRegistration();
+        Assert.assertFalse(app.getHelperUser().isLogged());
+        Assert.assertTrue(app.getHelperUser().isAlertWithErrorPresent("Wrong email or password format"));
+        Assert.assertTrue(app.getHelperUser().isErrorWrongFormat());
 
     }
+
+    @Test
+    public void registrationNegativeWrongPasswordFormat(){
+        app.getHelperUser().openLoginRegistrationForm();
+        app.getHelperUser().fillLoginRegistrationForm(new User().setEmail("city2@gmail.com").setPassword("Yy12345"));
+        app.getHelperUser().submitRegistration();
+        Assert.assertFalse(app.getHelperUser().isLogged());
+        Assert.assertTrue(app.getHelperUser().isAlertPresent());
+        Assert.assertTrue(app.getHelperUser().isErrorWrongFormat());
+
+    }
+
+    @Test
+    public void registrationNegativeUserAlreadyExists(){
+        app.getHelperUser().openLoginRegistrationForm();
+        app.getHelperUser().fillLoginRegistrationForm(new User().setEmail("city1@gmail.com").setPassword("Yy12345$"));
+        app.getHelperUser().submitRegistration();
+        Assert.assertFalse(app.getHelperUser().isLogged());
+        app.getHelperUser().pause(3000);
+        Assert.assertTrue(app.getHelperUser().isAlertWithErrorPresent("User already exist"));
+
+    }
+
 }

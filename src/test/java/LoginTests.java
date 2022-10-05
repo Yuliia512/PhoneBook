@@ -33,14 +33,16 @@ public class LoginTests extends TestBase {
 
     @Test
     public void loginSuccess() {
-
+        logger.info("test started------------Login success");
         //open login form
         app.getHelperUser().openLoginRegistrationForm();
         //fill email
         app.getHelperUser().fillLoginRegistrationForm("423090@gmail.com", "Yy12345$");
         // submit login
+        logger.info("User login with data:  email 423090@gmail.com & password Yy12345$");
         app.getHelperUser().submitLogin();
         Assert.assertTrue(app.getHelperUser().isLogged());
+        logger.info("Assert passed");
 
 
     }
