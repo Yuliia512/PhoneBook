@@ -18,7 +18,7 @@ public class AddNewContactTests extends TestBase {
 
     @Test
 
-    public void AddNewContactSuccess() {
+    public void addNewContactSuccess() {
         Random random = new Random();
         int i = random.nextInt(1000) + 1000;
 
@@ -28,14 +28,15 @@ public class AddNewContactTests extends TestBase {
                 .phone("3434345" + i)
                 .email("john" + i + "@mail.com")
                 .address("Rehovot")
-                .description("")
+                .description("Best friend")
                 .build();
 
 
         app.helperContact().openContactForm();
         app.helperContact().fillContactForm(contact);
-        app.helperContact().TabMethod();
-        app.helperContact().SaveButton();
+        app.helperContact().tabMethod();
+        app.helperContact().tabMethod();
+        app.helperContact().saveButton();
 
         Assert.assertTrue(app.helperContact().isContactAddedByName(contact.getName()));
         Assert.assertTrue(app.helperContact().isContactAddedByPhone(contact.getPhone()));
@@ -43,9 +44,9 @@ public class AddNewContactTests extends TestBase {
     }
 
 
-    @Test(invocationCount = 3)
+    @Test()
 
-    public void AddNewContactSuccessRequiredFields() {
+    public void addNewContactSuccessRequiredFields() {
         Random random = new Random();
         int i = random.nextInt(1000) + 1000;
 
@@ -60,8 +61,8 @@ public class AddNewContactTests extends TestBase {
 
         app.helperContact().openContactForm();
         app.helperContact().fillContactRequiredForm(contact);
-        app.helperContact().TabMethod();
-        app.helperContact().SaveButton();
+        app.helperContact().tabMethod();
+        app.helperContact().saveButton();
 
         Assert.assertTrue(app.helperContact().isContactAddedByName(contact.getName()));
         Assert.assertTrue(app.helperContact().isContactAddedByPhone(contact.getPhone()));
@@ -69,37 +70,44 @@ public class AddNewContactTests extends TestBase {
 
     @Test
 
-    public void AddNewContactWrongName() {
+    public void addNewContactWrongName() {
                 Contact contact = Contact.builder()
                 .name("")
                 .lastName("Moo")
                 .phone("3434345000")
                 .email("M@mail.com")
                 .address("Rehovot")
-                .description("The best friend")
                 .build();
 
 
         app.helperContact().openContactForm();
         app.helperContact().fillContactForm(contact);
-        app.helperContact().TabMethod();
-        app.helperContact().SaveButton();
+        app.helperContact().tabMethod();
+        app.helperContact().saveButton();
+        app.helperContact().tabMethod();
+        app.helperContact().tabMethod();
+        app.helperContact().tabMethod();
+        app.helperContact().tabMethod();
+        app.helperContact().tabMethod();
+        app.helperContact().tabMethod();
+        app.helperContact().tabMethod();
+        app.helperContact().tabMethod();
 
         Assert.assertTrue(app.helperContact().isAddPageStillDisplayed());
         }
 
-        @Test
+        @Test(enabled = false)
         public void ChangeContact(){
             Contact contact = Contact.builder()
                     .name("Lisa").
                     build();
-        app.helperContact().OpenExistContacts();
-        app.helperContact().FindContactByName("Mini");
-        app.helperContact().ClickEditButton();
-        app.helperContact().ToClearField();
-        app.helperContact().ToFillNewInformation(contact);
-        app.helperContact().SaveButtonToChangeContact();
-        Assert.assertTrue(app.helperContact().IsDetailedCardPresent());
+        app.helperContact().openExistContacts();
+        app.helperContact().findContactByName("Mini");
+        app.helperContact().clickEditButton();
+        app.helperContact().toClearField();
+        app.helperContact().toFillNewInformation(contact);
+        app.helperContact().saveButtonToChangeContact();
+        Assert.assertTrue(app.helperContact().isDetailedCardPresent());
 
         }
 

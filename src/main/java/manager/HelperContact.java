@@ -33,20 +33,20 @@ public class HelperContact extends HelperBase {
     }
 
 
-    public void SaveButton() {
+    public void saveButton() {
         WebElement saveButton = wd.findElement(By.xpath("//b[text()='Save']"));
         saveButton.click();
 
     }
 
-    public void SaveButtonToChangeContact() {
+    public void saveButtonToChangeContact() {
         WebElement saveButton = wd.findElement(By.xpath("//button[text()='Save']"));
         saveButton.click();
 
     }
 
 
-    public void TabMethod() {
+    public void tabMethod() {
       WebElement tab = wd.findElement(By.cssSelector("[placeholder='description']"));
       tab.sendKeys(Keys.TAB);
 
@@ -79,22 +79,22 @@ public class HelperContact extends HelperBase {
         type(By.xpath("//input[@placeholder='Address']"), contact.getAddress());
     }
 
-    //public boolean isAddPageStillDisplayed() {
-        //return isElementPresent(By.cssSelector("a.active[href='/add']"));
-    //}
+    public boolean iisAddPageStillDisplayed() {
+        return isElementPresent(By.cssSelector("a.active[href='/add']"));
+    }
 
-    public void OpenExistContacts() {
+    public void openExistContacts() {
         WebElement loginTab = wd.findElement(By.cssSelector("a[href='/contacts']"));
         loginTab.click();
     }
 
-    public void FindContactByName(String name) {
+    public void findContactByName(String name) {
         WebElement ContactName = wd.findElement(By.cssSelector("h2"));
         ContactName.getText();
         ContactName.click();
     }
 
-    public void ClickRemoveButton() {
+    public void clickRemoveButton() {
         WebElement delete = wd.findElement(By.xpath("//button[text()='Remove']"));
         delete.click();
     }
@@ -104,23 +104,23 @@ public class HelperContact extends HelperBase {
 
 
 
-    public void ClickEditButton() {
+    public void clickEditButton() {
         WebElement edit = wd.findElement(By.xpath("//button[text()='Edit']"));
         edit.click();
     }
 
-    public void ToClearField() {
+    public void toClearField() {
         WebElement element = wd.findElement(By.xpath("//input[@placeholder='Name']"));
         element.click();
         element.clear();
     }
 
-    public void ToFillNewInformation(Contact contact) {
+    public void toFillNewInformation(Contact contact) {
         type(By.xpath("//input[@placeholder='Name']"), contact.getName());
     }
 
 
-    public boolean IsDetailedCardPresent() {
+    public boolean isDetailedCardPresent() {
         return isElementPresent(By.cssSelector(".contact-item-detailed_card__50dTS"));
     }
 
@@ -177,11 +177,11 @@ public class HelperContact extends HelperBase {
     }
 
     public void providerOfContacts() {
-while(wd.findElements(By.cssSelector(".contact-item_card__2SOIM")).size()<3){
-    AddNewContact();
+while(countOfContact()<4){
+    addNewContact();
 }
     }
-    public void AddNewContact() {
+    public void addNewContact() {
         Random random = new Random();
         int i = random.nextInt(1000) + 1000;
         Contact contact = Contact.builder()
@@ -193,8 +193,9 @@ while(wd.findElements(By.cssSelector(".contact-item_card__2SOIM")).size()<3){
                 .build();
         openContactForm();
         fillContactRequiredForm(contact);
-        TabMethod();
-        SaveButton();
+        tabMethod();
+        saveButton();
+        logger.info("Provider added contact" +contact.toString());
     }
 }
 

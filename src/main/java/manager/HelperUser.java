@@ -18,13 +18,15 @@ public class HelperUser extends HelperBase{
 
 
     public boolean isLogged() {
+
         List<WebElement> list = wd.findElements(By.xpath("//button[text()='Sign Out']"));
         return list.size() > 0;
+
     }
 
     public void logout() {
-        wd.findElement(By.xpath("//button[text()='Sign Out']")).click();
 
+        wd.findElement(By.xpath("//button[text()='Sign Out']")).click();
     }
 
 
@@ -83,7 +85,6 @@ public class HelperUser extends HelperBase{
 //        alert.dismiss();
 //        //type text
 //        alert.sendKeys("Hello");
-
         return errorText.contains("Wrong email or password format");
     }
 
@@ -93,10 +94,10 @@ public class HelperUser extends HelperBase{
 
     }
 
-//    public String getTitleMessage() {
-//
-//        return wd.findElement(By.xpath("//h1[text()=' No Contacts here!']")).getText();
-//    }
+public String getTitleMessage() {
+
+     return wd.findElement(By.xpath("//div[text()='Login Failed with code 400']")).getText();
+    }
 
 
     public boolean isNoContactsHereDisplayed() {

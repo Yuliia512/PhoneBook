@@ -1,0 +1,45 @@
+17:15:17.541 INFO  manager.ApplicationManager - Chrome driver opened
+17:15:19.030 INFO  manager.ApplicationManager - Current URL is --:https://contacts-app.tobbymarshall815.vercel.app/home
+17:15:19.059 INFO  TestBase - Start test with name:loginNegativeWrongEmailFormat
+17:15:19.060 INFO  TestBase - Start checking authorisation
+17:15:19.061 INFO  manager.ListenerWD - Before find elements By ----> By.xpath: //button[text()='Sign Out']
+17:15:24.120 INFO  manager.ListenerWD - After find elements By ----> By.xpath: //button[text()='Sign Out']
+17:15:24.122 INFO  manager.ListenerWD - List size ---0
+17:15:24.126 INFO  TestBase - Test has not needed logout
+17:15:24.127 INFO  manager.ListenerWD - Before find element By ----> By.xpath: //a[@href='/login']
+17:15:24.151 INFO  manager.ListenerWD - After find element By ----> By.xpath: //a[@href='/login']
+17:15:24.197 INFO  manager.ListenerWD - Before find element By ----> By.xpath: //input[@placeholder='Email']
+17:15:24.224 INFO  manager.ListenerWD - After find element By ----> By.xpath: //input[@placeholder='Email']
+17:15:24.327 INFO  manager.ListenerWD - Before find element By ----> By.xpath: //input[@placeholder='Password']
+17:15:24.352 INFO  manager.ListenerWD - After find element By ----> By.xpath: //input[@placeholder='Password']
+17:15:24.448 INFO  manager.ListenerWD - Before find element By ----> By.xpath: //*[text()=' Login']
+17:15:24.468 INFO  manager.ListenerWD - After find element By ----> By.xpath: //*[text()=' Login']
+17:15:24.503 INFO  manager.ListenerWD - Before find elements By ----> By.xpath: //button[text()='Sign Out']
+17:15:25.209 INFO  manager.ListenerWD - After find elements By ----> By.xpath: //button[text()='Sign Out']
+17:15:25.209 INFO  manager.ListenerWD - List size ---0
+17:15:25.238 INFO  TestBase - Start test with name:loginNegativeWrongPasswordFormat
+17:15:25.239 INFO  TestBase - Start checking authorisation
+17:15:25.240 INFO  manager.ListenerWD - Before find elements By ----> By.xpath: //button[text()='Sign Out']
+17:15:25.254 INFO  manager.ListenerWD - We have a 'PROBLEM'
+17:15:25.255 INFO  manager.ListenerWD - The name of error method ---findElements
+17:15:25.258 INFO  manager.ListenerWD - Describe of error ---org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Wrong email or password format
+            Email must contains one @ and minimum 2 symbols after last dot
+            Password must contain at least one uppercase letter!
+            Password must contain at least one lowercase letter!
+            Password must contain at least one digit!
+            Password must contain at least one special symbol from [‘$’,’~’,’-‘,’_’]!}
+  (Session info: chrome=105.0.5195.127): Wrong email or password format
+            Email must contains one @ and minimum 2 symbols after last dot
+            Password must contain at least one uppercase letter!
+            Password must contain at least one lowercase letter!
+            Password must contain at least one digit!
+            Password must contain at least one special symbol from [‘$’,’~’,’-‘,’_’]!
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'LAPTOP-MOSO9MHA', ip: '192.168.1.12', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f5d24cd60ea027d72d5ff6cfbc4e2524, findElements {using=xpath, value=//button[text()='Sign Out']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\User\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:61671}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61671/devtoo..., se:cdpVersion: 105.0.5195.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f5d24cd60ea027d72d5ff6cfbc4e2524
+17:15:25.259 INFO  manager.ListenerWD - **********
+17:15:25.259 INFO  manager.ListenerWD - ChromeDriver: chrome on WINDOWS (f5d24cd60ea027d72d5ff6cfbc4e2524)
+17:15:25.266 INFO  manager.ListenerWD - Screen with error is :1626  src/test/screenshots/screen1626.png
