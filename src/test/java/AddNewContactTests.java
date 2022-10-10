@@ -28,7 +28,7 @@ public class AddNewContactTests extends TestBase {
                 .phone("3434345" + i)
                 .email("john" + i + "@mail.com")
                 .address("Rehovot")
-                .description("The best friend")
+                .description("")
                 .build();
 
 
@@ -37,13 +37,13 @@ public class AddNewContactTests extends TestBase {
         app.helperContact().TabMethod();
         app.helperContact().SaveButton();
 
-        Assert.assertTrue(app.helperContact().isContactContactAddedByName(contact.getName()));
-        Assert.assertTrue(app.helperContact().isContactContactAddedByPhone(contact.getPhone()));
+        Assert.assertTrue(app.helperContact().isContactAddedByName(contact.getName()));
+        Assert.assertTrue(app.helperContact().isContactAddedByPhone(contact.getPhone()));
 
     }
 
 
-    @Test
+    @Test(invocationCount = 3)
 
     public void AddNewContactSuccessRequiredFields() {
         Random random = new Random();
@@ -63,8 +63,8 @@ public class AddNewContactTests extends TestBase {
         app.helperContact().TabMethod();
         app.helperContact().SaveButton();
 
-        Assert.assertTrue(app.helperContact().isContactContactAddedByName(contact.getName()));
-        Assert.assertTrue(app.helperContact().isContactContactAddedByPhone(contact.getPhone()));
+        Assert.assertTrue(app.helperContact().isContactAddedByName(contact.getName()));
+        Assert.assertTrue(app.helperContact().isContactAddedByPhone(contact.getPhone()));
     }
 
     @Test
@@ -98,27 +98,9 @@ public class AddNewContactTests extends TestBase {
         app.helperContact().ClickEditButton();
         app.helperContact().ToClearField();
         app.helperContact().ToFillNewInformation(contact);
-        app.helperContact().SaveButton();
+        app.helperContact().SaveButtonToChangeContact();
         Assert.assertTrue(app.helperContact().IsDetailedCardPresent());
 
         }
 
-        @Test
-    public void DeleteContact(){
-        app.helperContact().OpenExistContacts();
-        app.helperContact().FindContactByName("Lany1423");
-        app.helperContact().ClickRemoveButton();
-        Assert.assertTrue(app.helperContact().isContactDeleted());
-        }
-
-    @Test
-    public void DeleteAllContacts(){
-        app.helperContact().OpenExistContacts();
-        app.helperContact().FindContactByName("Lisa");
-        app.helperContact().ClickRemoveButton();
-        app.getHelperUser().pause(3000);
-        app.helperContact().FindContactByName("Leny1409");
-        app.helperContact().ClickRemoveButton();
-        Assert.assertTrue(app.getHelperUser().isNoContactsHereDisplayed());
-    }
 }

@@ -1,0 +1,59 @@
+22:39:05.097 INFO  manager.ApplicationManager - Chrome driver opened
+22:39:06.739 INFO  manager.ApplicationManager - Current URL is --:https://contacts-app.tobbymarshall815.vercel.app/home
+22:39:06.765 INFO  TestBase - Start test with name:RemoveAllContacts
+22:39:06.766 INFO  manager.ListenerWD - Before find elements By ----> By.xpath: //button[text()='Sign Out']
+22:39:11.800 INFO  manager.ListenerWD - After find elements By ----> By.xpath: //button[text()='Sign Out']
+22:39:11.802 INFO  manager.ListenerWD - List size ---0
+22:39:11.803 INFO  manager.ListenerWD - Before find element By ----> By.xpath: //a[@href='/login']
+22:39:11.829 INFO  manager.ListenerWD - After find element By ----> By.xpath: //a[@href='/login']
+22:39:11.886 INFO  manager.ListenerWD - Before find element By ----> By.xpath: //input[@placeholder='Email']
+22:39:11.908 INFO  manager.ListenerWD - After find element By ----> By.xpath: //input[@placeholder='Email']
+22:39:12.014 INFO  manager.ListenerWD - Before find element By ----> By.xpath: //input[@placeholder='Password']
+22:39:12.034 INFO  manager.ListenerWD - After find element By ----> By.xpath: //input[@placeholder='Password']
+22:39:12.132 INFO  manager.ListenerWD - Before find element By ----> By.xpath: //*[text()=' Login']
+22:39:12.153 INFO  manager.ListenerWD - After find element By ----> By.xpath: //*[text()=' Login']
+22:39:12.183 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item_card__2SOIM
+22:39:17.193 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item_card__2SOIM
+22:39:17.193 INFO  manager.ListenerWD - List size ---0
+22:39:17.198 INFO  manager.ListenerWD - Before find element By ----> By.cssSelector: a[href = '/add']
+22:39:17.220 INFO  manager.ListenerWD - After find element By ----> By.cssSelector: a[href = '/add']
+22:39:17.263 INFO  manager.ListenerWD - Before find element By ----> By.xpath: //input[@placeholder='Name']
+22:39:17.284 INFO  manager.ListenerWD - After find element By ----> By.xpath: //input[@placeholder='Name']
+22:39:17.374 INFO  manager.ListenerWD - Before find element By ----> By.xpath: //input[@placeholder='Last Name']
+22:39:17.390 INFO  manager.ListenerWD - After find element By ----> By.xpath: //input[@placeholder='Last Name']
+22:39:17.472 INFO  manager.ListenerWD - Before find element By ----> By.xpath: //input[@placeholder='Phone']
+22:39:17.489 INFO  manager.ListenerWD - After find element By ----> By.xpath: //input[@placeholder='Phone']
+22:39:17.574 INFO  manager.ListenerWD - Before find element By ----> By.xpath: //input[@placeholder='email']
+22:39:17.591 INFO  manager.ListenerWD - After find element By ----> By.xpath: //input[@placeholder='email']
+22:39:17.674 INFO  manager.ListenerWD - Before find element By ----> By.xpath: //input[@placeholder='Address']
+22:39:17.694 INFO  manager.ListenerWD - After find element By ----> By.xpath: //input[@placeholder='Address']
+22:39:17.777 INFO  manager.ListenerWD - Before find element By ----> By.cssSelector: [placeholder='description']
+22:39:17.794 INFO  manager.ListenerWD - After find element By ----> By.cssSelector: [placeholder='description']
+22:39:17.839 INFO  manager.ListenerWD - Before find element By ----> By.xpath: //b[text()='Save']
+22:39:17.858 INFO  manager.ListenerWD - After find element By ----> By.xpath: //b[text()='Save']
+22:39:17.887 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item_card__2SOIM
+22:39:18.261 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item_card__2SOIM
+22:39:18.262 INFO  manager.ListenerWD - List size ---1
+22:39:18.262 INFO  manager.ListenerWD - Before find element By ----> By.cssSelector: .contact-item_card__2SOIM
+22:39:18.287 INFO  manager.ListenerWD - After find element By ----> By.cssSelector: .contact-item_card__2SOIM
+22:39:18.322 INFO  manager.ListenerWD - Before find element By ----> By.xpath: //button[text()='Remove']
+22:39:18.343 INFO  manager.ListenerWD - After find element By ----> By.xpath: //button[text()='Remove']
+22:39:18.878 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item_card__2SOIM
+22:39:23.898 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item_card__2SOIM
+22:39:23.899 INFO  manager.ListenerWD - List size ---0
+22:39:23.908 INFO  manager.ListenerWD - Before find element By ----> By.cssSelector: .contact-page_message__2qafk h1
+22:39:23.936 INFO  manager.ListenerWD - After find element By ----> By.cssSelector: .contact-page_message__2qafk h1
+22:39:26.386 INFO  manager.ListenerWD - We have a 'PROBLEM'
+22:39:26.387 INFO  manager.ListenerWD - The name of error method ---getText
+22:39:26.395 INFO  manager.ListenerWD - Describe of error ---org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=105.0.5195.127)
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'LAPTOP-MOSO9MHA', ip: '192.168.1.12', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a2c43df706128416242a2ef2672fd0a3, getElementText {id=b1805fed-15d5-4f1f-810f-e775ee6e092f}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\User\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:59870}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59870/devtoo..., se:cdpVersion: 105.0.5195.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (a2c43df706128416242a2ef2672fd0a3)] -> css selector: .contact-page_message__2qafk h1]
+Session ID: a2c43df706128416242a2ef2672fd0a3
+22:39:26.395 INFO  manager.ListenerWD - **********
+22:39:26.395 INFO  manager.ListenerWD - [[ChromeDriver: chrome on WINDOWS (a2c43df706128416242a2ef2672fd0a3)] -> css selector: .contact-page_message__2qafk h1]
+22:39:26.400 INFO  manager.ListenerWD - Screen with error is :1674  src/test/screenshots/screen1674.png

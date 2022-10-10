@@ -1,0 +1,102 @@
+22:22:25.051 INFO  manager.ApplicationManager - Chrome driver opened
+22:22:26.564 INFO  manager.ApplicationManager - Current URL is --:https://contacts-app.tobbymarshall815.vercel.app/home
+22:22:26.601 INFO  TestBase - Start test with name:removeFirstContact
+22:22:26.605 INFO  manager.ListenerWD - Before find elements By ----> By.xpath: //button[text()='Sign Out']
+22:22:31.640 INFO  manager.ListenerWD - After find elements By ----> By.xpath: //button[text()='Sign Out']
+22:22:31.642 INFO  manager.ListenerWD - List size ---0
+22:22:31.643 INFO  manager.ListenerWD - Before find element By ----> By.xpath: //a[@href='/login']
+22:22:31.668 INFO  manager.ListenerWD - After find element By ----> By.xpath: //a[@href='/login']
+22:22:31.722 INFO  manager.ListenerWD - Before find element By ----> By.xpath: //input[@placeholder='Email']
+22:22:31.745 INFO  manager.ListenerWD - After find element By ----> By.xpath: //input[@placeholder='Email']
+22:22:31.842 INFO  manager.ListenerWD - Before find element By ----> By.xpath: //input[@placeholder='Password']
+22:22:31.860 INFO  manager.ListenerWD - After find element By ----> By.xpath: //input[@placeholder='Password']
+22:22:31.952 INFO  manager.ListenerWD - Before find element By ----> By.xpath: //*[text()=' Login']
+22:22:31.973 INFO  manager.ListenerWD - After find element By ----> By.xpath: //*[text()=' Login']
+22:22:32.001 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:22:37.050 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:22:37.050 INFO  manager.ListenerWD - List size ---0
+22:22:37.050 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:22:42.087 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:22:42.088 INFO  manager.ListenerWD - List size ---0
+22:22:42.089 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:22:47.135 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:22:47.136 INFO  manager.ListenerWD - List size ---0
+22:22:47.136 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:22:52.147 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:22:52.148 INFO  manager.ListenerWD - List size ---0
+22:22:52.149 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:22:57.173 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:22:57.173 INFO  manager.ListenerWD - List size ---0
+22:22:57.173 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:23:02.234 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:23:02.235 INFO  manager.ListenerWD - List size ---0
+22:23:02.236 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:23:07.253 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:23:07.254 INFO  manager.ListenerWD - List size ---0
+22:23:07.255 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:23:12.326 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:23:12.326 INFO  manager.ListenerWD - List size ---0
+22:23:12.326 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:23:17.366 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:23:17.366 INFO  manager.ListenerWD - List size ---0
+22:23:17.367 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:23:22.375 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:23:22.375 INFO  manager.ListenerWD - List size ---0
+22:23:22.376 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:23:27.425 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:23:27.426 INFO  manager.ListenerWD - List size ---0
+22:23:27.427 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:23:32.438 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:23:32.438 INFO  manager.ListenerWD - List size ---0
+22:23:32.439 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:23:37.507 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:23:37.507 INFO  manager.ListenerWD - List size ---0
+22:23:37.507 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:23:42.535 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:23:42.536 INFO  manager.ListenerWD - List size ---0
+22:23:42.537 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:23:47.579 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:23:47.579 INFO  manager.ListenerWD - List size ---0
+22:23:47.580 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:23:52.644 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:23:52.644 INFO  manager.ListenerWD - List size ---0
+22:23:52.645 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:23:57.714 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:23:57.714 INFO  manager.ListenerWD - List size ---0
+22:23:57.714 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:24:02.790 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:24:02.791 INFO  manager.ListenerWD - List size ---0
+22:24:02.791 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:24:07.804 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:24:07.804 INFO  manager.ListenerWD - List size ---0
+22:24:07.804 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:24:12.823 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:24:12.823 INFO  manager.ListenerWD - List size ---0
+22:24:12.823 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:24:17.851 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:24:17.852 INFO  manager.ListenerWD - List size ---0
+22:24:17.853 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:24:22.918 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:24:22.918 INFO  manager.ListenerWD - List size ---0
+22:24:22.919 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:24:27.946 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:24:27.947 INFO  manager.ListenerWD - List size ---0
+22:24:27.948 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:24:33.004 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:24:33.005 INFO  manager.ListenerWD - List size ---0
+22:24:33.005 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:24:38.073 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:24:38.073 INFO  manager.ListenerWD - List size ---0
+22:24:38.073 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:24:43.100 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:24:43.101 INFO  manager.ListenerWD - List size ---0
+22:24:43.102 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:24:48.160 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:24:48.161 INFO  manager.ListenerWD - List size ---0
+22:24:48.161 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:24:53.236 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:24:53.236 INFO  manager.ListenerWD - List size ---0
+22:24:53.237 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:24:58.267 INFO  manager.ListenerWD - After find elements By ----> By.cssSelector: .contact-item-card__2SOIM
+22:24:58.268 INFO  manager.ListenerWD - List size ---0
+22:24:58.268 INFO  manager.ListenerWD - Before find elements By ----> By.cssSelector: .contact-item-card__2SOIM
