@@ -77,6 +77,7 @@ public class AddNewContactTests extends TestBase {
                 .phone("3434345000")
                 .email("M@mail.com")
                 .address("Rehovot")
+                        .description("friend")
                 .build();
 
 
@@ -92,6 +93,7 @@ public class AddNewContactTests extends TestBase {
         app.helperContact().tabMethod();
         app.helperContact().tabMethod();
         app.helperContact().tabMethod();
+
 
         Assert.assertTrue(app.helperContact().isAddPageStillDisplayed());
         }

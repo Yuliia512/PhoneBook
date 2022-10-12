@@ -1,3 +1,4 @@
+import manager.DataProviderUser;
 import models.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -31,25 +32,32 @@ public class LoginTests extends TestBase {
         Assert.assertTrue(app.getHelperUser().isLogged());
         logger.info("Assert passed(Model)");
 
-
-
-
     }
 
 
-    @Test
-    public void loginSuccess() {
-        logger.info("User login with data:  email 423090@gmail.com & password Yy12345$");
-        //open login form
+    @Test(dataProvider = "dataLogin", dataProviderClass = DataProviderUser.class)
+    public void loginSuccess(String email, String password) {
+        logger.info("Login success started with data: "+email + "password"+password);
         app.getHelperUser().openLoginRegistrationForm();
         //fill email
-        app.getHelperUser().fillLoginRegistrationForm("423090@gmail.com", "Yy12345$");
+        app.getHelperUser().fillLoginRegistrationForm(email, password);
         // submit login
 
         app.getHelperUser().submitLogin();
+        app.getHelperUser().pause(3000);
         Assert.assertTrue(app.getHelperUser().isLogged());
         logger.info("Assert check is Sign button Present");
+    }
 
+    @Test(dataProvider = "dataModelUser", dataProviderClass = DataProviderUser.class)
+    public void loginSuccessModelDP(User user) {
+        logger.info("Login scenario success was used data"+user.toString());
+
+        app.getHelperUser().openLoginRegistrationForm();
+        app.getHelperUser().fillLoginRegistrationForm(user);
+        app.getHelperUser().submitLogin();
+        Assert.assertTrue(app.getHelperUser().isLogged());
+        logger.info("Assert passed(Model)");
 
     }
 
